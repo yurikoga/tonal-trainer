@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios - Grau e Tom</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="led-container">
+        <div class="led led-blue"></div>
+        <div class="led led-yellow"></div>
+    </div>
+
+    <main class="container">
+        <a href="../../index.html" class="btn-voltar">← Voltar ao Menu</a>
+        
+        <section class="card-section">
+            <h2>Sorteador de Graus</h2>
+            <h1 id="resultado">?</h1>
+            <button onclick="sortear()">Sortear Grau</button>
+        </section>
+
+        <section class="card-section">
+            <h2>Sorteador de Toms Naturais</h2>
+            <h1 id="resultado2">?</h1>
+            <button onclick="sortear2()">Sortear Tom</button>
+        </section>
+    </main>
+
+    <script>
+        function sortear() {
+            const graus = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
+            const sorteado = graus[Math.floor(Math.random() * graus.length)];
+            document.getElementById("resultado").innerText = sorteado;
+        }
+        function sortear2() {
+            const graus = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+            const sorteado = graus[Math.floor(Math.random() * graus.length)];
+            document.getElementById("resultado2").innerText = sorteado;
+        }
+    </script>
+</body>
+</html>
